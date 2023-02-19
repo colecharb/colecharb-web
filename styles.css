@@ -1,11 +1,12 @@
 body {
   margin: 25px;
-  /* background-color: var(--bg); */
-  /* font-family: 'Metropolis'; */
-  /* font-weight: 400; */
+  background-color: #222;
+    color: #ccc;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-weight: 200; */
   /* font-style: normal; */
   /* color: var(--dark); */
-  font-size: 14pt;
+  font-size: 50pt;
 }
 
 .emph {
