@@ -1,0 +1,13 @@
+body {
+  margin: 25px;
+  /* background-color: var(--bg); */
+  /* font-family: 'Metropolis'; */
+  /* font-weight: 400; */
+  /* font-style: normal; */
+  /* color: var(--dark); */
+  font-size: 14pt;
+}
+
+.emph {
+  font-weight: 900;
+}
