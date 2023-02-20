@@ -18,7 +18,8 @@ a,
 a:link,
 a:visited {
   font-style: inherit;
-  color: #D9A300;
+  /* color: #D9A300; */
+    color: inherit;
   text-decoration: inherit;
 }
 
