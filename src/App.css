@@ -1,5 +1,6 @@
 #root {
-  max-width: 1280px;
+  max-width: 1000px;
+    min-width: 300;
   margin: 0 auto;
   padding: 2rem;
   /* text-align: center; */
@@ -41,17 +42,12 @@
 }
 
 .big-text {
-  font-size: 80pt;
-}
+  font-size: 30pt;
+    line-height: 40pt;
+    font-weight: 900;
+    hyphens: auto;
+  }
 
 .align-right {
   text-align: right;
-}
-
-.button {
-  margin: 0.5em;
-}
-
-.read-the-docs {
-  color: #888;
 }
