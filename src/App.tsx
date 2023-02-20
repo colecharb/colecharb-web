@@ -7,10 +7,13 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Cole Charbonneau</h1>
-        <span className='big-text align-right'>
-          TEST BRANCH!
-        </span>
+        <h2>Cole Charbonneau</h2>
+        <p className='big-text'>
+          Full-stack engineer and UX designer.
+          Currently developing for iOS at <a href='https://pocketchangeapp.ca' target='_blank'>
+            PocketChange Loyalty Inc.
+          </a>
+        </p>
       </div>
     </div>
   )
