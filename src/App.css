@@ -45,7 +45,7 @@
   font-size: 30pt;
     line-height: 40pt;
     font-weight: 900;
-    hyphens: auto;
+    /* hyphens: auto; */
   }
 
 .align-right {
