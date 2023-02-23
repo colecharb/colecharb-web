@@ -13,14 +13,6 @@
   transition: filter 300ms;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -31,23 +23,38 @@
   }
 }
 
+@keyframes shadow-ease-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-.card {
-  padding: 2em;
+.big-text {
+  font-size: clamp(30pt, 8vw, 60pt);
+  line-height: clamp(30pt, 8vw, 60pt);
+  font-weight: 900;
 }
 
-.big-text {
-  font-size: 30pt;
-    line-height: 40pt;
-    font-weight: 900;
-    /* hyphens: auto; */
+/* .poch {} */
+
+
+@media (hover) {
+  .poch:hover {
+    color: inherit;
+    filter: drop-shadow(0 0 2em rgba(255, 218, 124, 0.6));
   }
+}
 
 .align-right {
   text-align: right;
 }
+
