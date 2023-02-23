@@ -44,16 +44,6 @@
   font-weight: 900;
 }
 
-/* .poch {} */
-
-
-@media (hover) {
-  .poch:hover {
-    color: inherit;
-    filter: drop-shadow(0 0 2em rgba(255, 218, 124, 0.6));
-  }
-}
-
 .align-right {
   text-align: right;
 }
