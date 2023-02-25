@@ -18,6 +18,9 @@ function App() {
 
       </div>
 
+      {/* <div className='line-horizontal' />
+      <p className=''>asdfasdf</p> */}
+
       <div className='portfolio'>
 
         <div className='line-horizontal' />
