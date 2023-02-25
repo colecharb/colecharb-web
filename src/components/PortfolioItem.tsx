@@ -15,9 +15,14 @@ export default function (item: PortfolioItem) {
 
       <div className="portfolio-item-container">
 
-        {[1, 2, 3].map(n => (
-          <img src={`images/${item.title}/${n}-2.png`} className='screenshot' />
-        ))}
+        {[1, 2, 3].map(n => {
+          const randomVal = (3 * Math.random());
+          const sign = n % 2 === 0 ? 1 : -1;
+          const rando = sign * randomVal;
+          return (
+            <img src={`images/${item.title}/${n}-2.png`} className='screenshot' style={{ transform: `rotate(${rando}deg)` }} />
+          )
+        })}
 
         <div className='portfolio-description'>
           {item.description}
