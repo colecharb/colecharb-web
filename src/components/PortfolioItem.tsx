@@ -16,7 +16,7 @@ export default function (item: PortfolioItem) {
       <div className="portfolio-item-container">
 
         {[1, 2, 3].map(n => (
-          <img src={`images/${item.title}/${n}.PNG`} className='screenshot' />
+          <img src={`images/${item.title}/${n}-2.png`} className='screenshot' />
         ))}
 
         <div className='portfolio-description'>
