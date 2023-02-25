@@ -9,7 +9,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     title: "ClearCast",
     subtitle: "(iOS)",
-    description: "ClearCast is a minimalist weather app for iOS with an emphasis on intuitive UX. asldfk sdlfk sd fsldf aslkdfj asldjs dfskdjf asld skdj sadl skdjfasdlkfj;a sdlfkjsa dfkjfkdjf;a slk dkjf slsjlaskdfj dfk sksj dfkfj asd.f akj fkj dfs. skfj alsdkjf asldkfjasdf;  asdlkfj 5j kfjfsldkj adfjaksdj f f falskdjf f."
+    description: "ClearCast is a minimalist weather app for iOS with an emphasis on intuitive UI. asldfk sdlfk sd fsldf aslkdfj asldjs dfskdjf asld skdj sadl skdjfasdlkfj;a sdlfkjsa dfkjfkdjf;a slk dkjf slsjlaskdfj dfk sksj dfkfj asd.f akj fkj dfs. skfj alsdkjf asldkfjasdf;  asdlkfj 5j kfjfsldkj adfjaksdj f f falskdjf f."
   }
 ];
 export default portfolioItems;
