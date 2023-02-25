@@ -1,50 +1,97 @@
 #root {
-  max-width: 1000px;
-    min-width: 300;
+  max-width: 1200px;
+    /* min-width: 300; */
   margin: 0 auto;
-  padding: 2rem;
-  /* text-align: center; */
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes shadow-ease-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  padding: 1rem;
+    /* Variables */
+    --margin: 1rem;
+    --negative-margin: -0.5rem;
+    --border-width: 2px;
+    --medium: #fff6;
+    --subtle: #fff2;
+    --radius: 1rem;
 }
 
 .big-text {
   font-size: clamp(30pt, 8vw, 60pt);
-  line-height: clamp(30pt, 8vw, 60pt);
+  line-height: 100%;
   font-weight: 900;
+  margin-top: 0%;
+  margin-bottom: 0.5lh;
 }
 
 .align-right {
   text-align: right;
 }
 
+.line-horizontal {
+  height: var(--border-width);
+  border-radius: var(--border-width);
+  background-color: var(--medium);
+}
+.portfolio {
+  margin-top: 3em;
+}
+
+.portfolio-item {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.portfolio-item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-top: 0%;
+  margin-left: var(--negative-margin);
+  margin-right: var(--negative-margin);
+  /* border-style: solid; */
+  /* border-width: var(--border-width);
+  border-color: var(--subtle);
+  border-radius: var(--radius); */
+  /* padding: var(--margin) */
+}
+/* .portfolio-column {
+  min-width: 300px;
+}
+.portfolio-column.left {
+  flex: 2;
+}
+.portfolio-column.right {
+  flex: 1;
+}
+
+*/ .portfolio-item-title {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: xx-large;
+}
+
+/* .portfolio-item-title.subtitle {
+  color: var(--medium);
+} */
+
+.portfolio-description {
+  flex: 1;
+  font-size: clamp(12pt, 2vw, 18pt);
+  line-height: 115%;
+  margin: 0.5rem;
+  min-width: 150px;
+}
+
+/* .image-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+} */
+
+.screenshot {
+  display: block;
+  flex: 1;
+  width: 20%;
+  height: 100%;
+  /* aspect-ratio: 1/2.5; */
+  min-width: 150px;
+  margin: 0.5rem;
+}
