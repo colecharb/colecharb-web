@@ -3,6 +3,8 @@
     /* min-width: 300; */
   margin: 0 auto;
   padding: 1rem;
+  font-size: clamp(12pt, 1.5vw, 16pt);
+    line-height: 115%;
     /* Variables */
     --margin: 1rem;
     --negative-margin: -0.5rem;
@@ -13,6 +15,7 @@
 }
 
 .big-text {
+  /* color: var(--subtle); */
   font-size: clamp(30pt, 8vw, 60pt);
   line-height: 100%;
   font-weight: 900;
@@ -39,13 +42,13 @@
 }
 
 .portfolio-item-container {
+  /* font-size: vw; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-shrink: 0;
   margin-top: 0%;
-  margin-left: var(--negative-margin);
-  margin-right: var(--negative-margin);
+  gap: 2rem;
   /* border-style: solid; */
   /* border-width: var(--border-width);
   border-color: var(--subtle);
@@ -64,8 +67,9 @@
 
 */ .portfolio-item-title {
   margin-top: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: xx-large;
+  /* text-decoration: underline */
 }
 
 /* .portfolio-item-title.subtitle {
@@ -74,10 +78,10 @@
 
 .portfolio-description {
   flex: 1;
-  font-size: clamp(12pt, 2vw, 18pt);
-  line-height: 115%;
+  /* font-size: clamp(12pt, 1.5vw, 16pt);
+        line-height: 115%; */
   margin: 0.5rem;
-  min-width: 150px;
+  min-width: 9em;
   align-self: center;
 }
 
@@ -92,6 +96,6 @@
   flex: 1;
   width: 20%;
   height: 100%;
-  min-width: 150px;
-  margin: 0.5rem;
+  min-width: 9em;
+    /* margin: rem; */
 }
