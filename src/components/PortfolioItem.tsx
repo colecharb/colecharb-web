@@ -20,7 +20,6 @@ export default function (item: PortfolioItem) {
             ))}
           </div>
 
-
         </div>
 
         <div className="portfolio-column right">
