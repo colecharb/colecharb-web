@@ -31,8 +31,6 @@ body {
   background-color: #222;
   margin: 0;
   display: flex;
-  /* place-items: center; */
-  /* min-width: 320px; */
   min-height: 100vh;
 }
 
@@ -49,7 +47,7 @@ h1,
 h2 {
   font-size: 2em;
   font-weight: normal;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
     /* margin-bottom: 3rem; */
 }
 
@@ -58,7 +56,7 @@ h2 {
 } */
 
 h3 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 900;
   text-align: center;
 }
