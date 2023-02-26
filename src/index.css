@@ -17,8 +17,7 @@ a,
 a:link,
 a:visited {
   font-style: inherit;
-  /* color: #D9A300; */
-    color: inherit;
+  color: inherit;
   text-decoration: inherit;
 }
 
@@ -28,13 +27,13 @@ a:hover {
 }
 
 body {
-  background-color: #222;
+  
   margin: 0;
   display: flex;
   min-height: 100vh;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -43,20 +42,22 @@ h6 {
   line-height: 100%;
 }
 
-h1,
-h2 {
+*/
+
+h1 {
   font-size: 2em;
   font-weight: normal;
+  margin-bottom: 3rem;
+}
+  
+h2 {
+  font-size: 1.5em;
+    font-weight: normal;
   margin-bottom: 5rem;
-    /* margin-bottom: 3rem; */
 }
 
-/* h2 {
-  text-align: center;
-} */
-
 h3 {
-  font-size: 2rem;
+  font-size: 1.5em;
   font-weight: 900;
   text-align: center;
 }
