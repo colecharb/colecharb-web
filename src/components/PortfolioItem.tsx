@@ -31,7 +31,14 @@ export default function (item: PortfolioItem) {
 
         {[1, 2, 3].map(n => {
           return (
-            <img src={`images/${item.title}/${n}-2.png`} className='screenshot' style={{ transform: `rotate(${randomAngle(n)}deg) translate(0px, ${randomShift()}rem)` }} />
+            <img
+              src={`images/${item.title}/${n}-2.png`}
+              className='screenshot'
+              style={{
+                rotate: `${randomAngle(n)}deg`,
+                translate: `0px ${randomShift()}rem`,
+              }}
+            />
           )
         })}
 
