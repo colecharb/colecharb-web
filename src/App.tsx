@@ -41,7 +41,7 @@ function App() {
 
         <div className='contact-info'>
           <p>
-            <a href='mailto:colecharb.dev@gmail.com' target='_blank'>
+            <a href='mailto:colecharb.dev@gmail.com' target='_blank' rel="noopener noreferrer">
               colecharb.dev@gmail.com
             </a>
           </p>
@@ -51,7 +51,7 @@ function App() {
             </a>
           </p>
           <p>
-            <a href='https://www.linkedin.com/in/colecharbonneau/' target='_blank'>
+            <a href='https://www.linkedin.com/in/colecharbonneau/' target='_blank' rel="noopener noreferrer">
               LinkedIn
             </a>
           </p>
