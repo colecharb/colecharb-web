@@ -16,7 +16,7 @@
       padding: 1rem;
       font-size: clamp(12pt, 3vw, 18pt);
       line-height: 125%;
-      margin-bottom: 10rem;
+      margin-bottom: 0rem;
 }
 
 .big-text {
