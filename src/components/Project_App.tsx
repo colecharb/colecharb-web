@@ -1,7 +1,7 @@
 import '../App.css'
-import { PortfolioItem } from '../types'
+import { App } from '../types'
 
-export default function (item: PortfolioItem) {
+export default function ({ app }: { app: App }) {
 
   const randomAngle = (n?: number) => {
     const angle = 4 * Math.random() + 1;
@@ -21,9 +21,9 @@ export default function (item: PortfolioItem) {
     <div className='portfolio-item'>
 
       <h3 className='portfolio-item-title'>
-        {item.title}
+        {app.title}
         {/* <span className='portfolio-item-title subtitle'>
-          {' ' + item.subtitle}
+          {' ' + app.subtitle}
         </span> */}
       </h3>
 
@@ -32,7 +32,7 @@ export default function (item: PortfolioItem) {
         {[1, 2, 3].map(n => {
           return (
             <img
-              src={`images/${item.title}/${n}-2.png`}
+              src={`images/${app.title}/${n}-2.png`}
               className='screenshot'
               style={{
                 rotate: `${randomAngle(n)}deg`,
@@ -43,7 +43,7 @@ export default function (item: PortfolioItem) {
         })}
 
         <div className='portfolio-description'>
-          {item.description}
+          {app.description}
         </div>
 
 

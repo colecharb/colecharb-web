@@ -1,11 +1,6 @@
-import { PortfolioItem } from "../types";
+import { App } from "../types";
 
-const portfolioItems: PortfolioItem[] = [
-  // {
-  //   title: "This Site!",
-  //   // subtitle: "Web",
-  //   // description: ""
-  // },
+export const appProjects: App[] = [
   {
     title: "PocketChange",
     subtitle: "(iOS)",
@@ -17,4 +12,3 @@ const portfolioItems: PortfolioItem[] = [
     description: "A minimalist weather app for iOS. Data from OpenWeather APIs are aggregated to display one intuitive screen of daily and bi-hourly forecasts. Layout animations allow the app to smoothly and convincingly adjust to show as much or little information as the user needs. Demo available upon request."
   }
 ];
-export default portfolioItems;
