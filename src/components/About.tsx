@@ -11,12 +11,13 @@ export default function () {
       </p>
 
       <p>
-        Hello and welcome! I'm a full-stack developer and designer with a background in pure mathematics and an avidity for constantly learning and improving my skills.
+        Welcome! I'm a full-stack developer and designer with a background in pure mathematics and an obsession with constantly learning and improving my skills.
         Developing intuitive and appealing user experiences is what I'm all about.
       </p>
       <p>
-        I'm always excited to take on new challenges.
+
         Please take a look at my portfolio for examples of my work and feel free to contact me if you're interested in working together.
+        I'm always excited to take on new challenges.
 
       </p>
       <p>
