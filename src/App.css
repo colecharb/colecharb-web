@@ -29,8 +29,8 @@
 .tab-button {
   background: none;
   padding: 0em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  /* padding-left: 0.5em;
+    padding-right: 0.5em; */
 }
 
 /* .tab-button:hover {} */
