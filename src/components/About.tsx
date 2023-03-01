@@ -11,7 +11,7 @@ export default function () {
       </p>
 
       <p>
-        Hello and welcome to my portfolio website! I'm a full-stack developer and designer with a background in pure mathematics and an avidity for constantly learning and improving my skills.
+        Hello and welcome! I'm a full-stack developer and designer with a background in pure mathematics and an avidity for constantly learning and improving my skills.
         Developing intuitive and appealing user experiences is what I'm all about.
       </p>
       <p>
