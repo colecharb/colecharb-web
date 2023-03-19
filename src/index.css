@@ -14,8 +14,9 @@
 }
 
 a,
-a:link,
+/* a:link, */
 a:visited {
+  color: inherit;
   font-style: inherit;
   text-decoration: inherit;
 }

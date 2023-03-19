@@ -3,6 +3,7 @@ import About from "./components/About";
 import ContactInfo from "./components/ContactInfo";
 import Projects from "./components/Projects";
 
+
 export default function () {
 
   const tabs = [
@@ -21,7 +22,7 @@ export default function () {
         {tabs.map((tab, index) => (
 
 
-          <h2 className="tab-button-title">
+          <h2>
             <NavLink
               to={tab.path}
               className={({ isActive, isPending }) =>
