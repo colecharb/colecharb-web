@@ -12,7 +12,9 @@ export default function () {
       </p>
 
       <p>
-        Welcome! I'm a full-stack developer and designer with a background in pure mathematics and an obsession with constantly learning and improving my skills.
+        Hi!
+        I like making things.
+        I'm a full-stack developer and designer with a background in pure mathematics and an obsession with constantly learning and improving my skills.
         Developing intuitive and appealing user experiences is what I'm all about.
       </p>
       <p>
