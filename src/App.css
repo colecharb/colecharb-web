@@ -29,24 +29,25 @@
 .tab-button {
   background: none;
   padding: 0em;
-  /* padding-left: 0.5em;
-    padding-right: 0.5em; */
+  color: var(--medium);
+    font-variant: small-caps;
 }
 
+.active {
+  color: white;
+}
 /* .tab-button:hover {} */
 
-.tab-button-title {
-  font-variant: small-caps;
-}
+/* .tab-button-title {
+  
+} */
 
-.tab-button-title:hover {
+/* .tab-button-title:hover {
   text-decoration: underline;
   color: white;
 }
 
-.tab-button-title:active {
-  color: var(--medium);
-}
+*/
 .big-text {
   /* color: var(--subtle); */
   font-size: clamp(30pt, 8vw, 60pt);
