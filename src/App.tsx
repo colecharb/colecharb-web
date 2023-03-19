@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Cole Charbonneau</h1>
+      {/* <h1>Cole Charbonneau</h1> */}
 
       <TabThingy
         tabs={[
@@ -18,15 +18,6 @@ function App() {
         ]}
         initialTab={1}
       />
-
-      {/* <div className='line-horizontal' />
-      <About />
-
-      <div className='line-horizontal' />
-      <Projects />
-
-      <div className='line-horizontal' />
-      <ContactInfo /> */}
 
     </div>
   );
