@@ -5,9 +5,10 @@ export default function () {
 
       <p className='big-text'>
         Full-stack engineer and UX designer.
-        Currently developing for iOS at <a className='poch' href='https://pocketchangeapp.ca' target='_blank'>
+        Currently developing for iOS at PocketChange
+        {/* <a className='poch' href='https://pocketchangeapp.ca' target='_blank'>
           <span className='poch'>PocketChange</span>
-        </a>.
+        </a>. */}
       </p>
 
       <p>
