@@ -3,14 +3,16 @@ import About from "./components/About";
 import ContactInfo from "./components/ContactInfo";
 import Projects from "./components/Projects";
 
+type Tab = { title: string, path: string };
 
 export default function () {
 
-  const tabs = [
+  const tabs: Tab[] = [
     { title: "About", path: '/' },
     { title: "Portfolio", path: '/portfolio' },
     { title: "Contact", path: '/contact' },
   ];
+
 
   return (
 
@@ -20,8 +22,6 @@ export default function () {
 
       <div className="tab-bar">
         {tabs.map((tab, index) => (
-
-
           <h2>
             <NavLink
               to={tab.path}
@@ -31,24 +31,18 @@ export default function () {
             >
               {tab.title}
             </NavLink>
-
           </h2>
-
-
-
         ))}
       </div>
 
       <div className="line-horizontal" />
 
       <div className="section">
-
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/portfolio" element={<Projects />} />
           <Route path="/contact" element={<ContactInfo />} />
         </Routes>
-
       </div>
 
     </BrowserRouter>
