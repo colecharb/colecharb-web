@@ -1,7 +1,7 @@
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import ContactInfo from "./components/ContactInfo";
-import Projects from "./components/Projects";
+import Portfolio from "./components/Portfolio";
 
 type Tab = { title: string, path: string };
 
@@ -40,7 +40,7 @@ export default function () {
       <div className="section">
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/portfolio" element={<Projects />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<ContactInfo />} />
         </Routes>
       </div>
