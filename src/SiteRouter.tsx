@@ -16,7 +16,8 @@ export default function () {
 
   return (
 
-    <BrowserRouter>
+    // <BrowserRouter>
+    <>
 
       <div className="line-horizontal" />
 
@@ -45,7 +46,8 @@ export default function () {
         </Routes>
       </div>
 
-    </BrowserRouter>
+      {/* </BrowserRouter> */}
+    </>
 
   )
 }
