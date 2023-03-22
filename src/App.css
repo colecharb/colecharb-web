@@ -23,12 +23,12 @@
 .tab-bar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+    gap: 0.6em;
 }
 
 .tab-button {
   background: none;
-  padding: 0em;
   color: var(--medium);
     font-variant: small-caps;
 }
@@ -101,8 +101,8 @@
   padding: 0.25in;
 }
 .portfolio-item {
-  margin-top: 4em;
-    margin-bottom: 4rem;
+  margin-top: 6em;
+    margin-bottom: 6em;
 }
 
 .portfolio-item-container {

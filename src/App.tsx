@@ -9,7 +9,7 @@ type Tab = { title: string, path: string };
 function App() {
 
   const tabs: Tab[] = [
-    { title: "About", path: '/' },
+    // { title: "About", path: '/' },
     { title: "Portfolio", path: '/portfolio' },
     { title: "Contact", path: '/contact' },
   ];
@@ -19,20 +19,43 @@ function App() {
 
       <div className="line-horizontal" />
 
-      <div className="tab-bar">
-        {tabs.map((tab, index) => (
-          <h2>
-            <NavLink
-              to={tab.path}
-              className='tab-button'
-            >
-              {tab.title}
-            </NavLink>
-          </h2>
-        ))}
+      <div style={{ display: 'flex', alignItems: 'center', padding: '0.25em', gap: '1em' }}>
+
+        <h2>
+          <NavLink
+            to="/"
+            className='tab-button'
+          >
+            Cole Charbonneau
+          </NavLink>
+        </h2>
+
+        {/* <span style={{ fontSize: '1.2em', lineHeight: '120%' }}>
+          Cole Charbonneau
+        </span> */}
+
+        <div style={{ flex: 1 }}>
+
+          <div className="tab-bar">
+            {tabs.map((tab, index) => (
+              <h2>
+                <NavLink
+                  to={tab.path}
+                  className='tab-button'
+                >
+                  {tab.title}
+                </NavLink>
+              </h2>
+            ))}
+          </div>
+
+
+        </div>
+
       </div>
 
       <div className="line-horizontal" />
+
 
       <div className="section">
         <Routes>
