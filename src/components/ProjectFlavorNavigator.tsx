@@ -69,7 +69,7 @@ export default function () {
 
       <div style={{ display: 'flex', flexDirection: "column", flexWrap: 'wrap', justifyContent: 'center', gap: '1em', alignItems: 'center' }}>
 
-        <div style={{ display: 'flex', flexDirection: "row-reverse", flexWrap: "wrap", justifyContent: 'center', gap: '1em' }}>
+        <div style={{ display: 'flex', flexDirection: "row-reverse", flexWrap: "wrap", justifyContent: 'center', gap: '1em', padding: '1em' }}>
 
         {/* <div style={{}}> */}
         <div style={{ width: '75vw', maxWidth: '300px', backgroundColor: 'white', borderRadius: '10px', padding: '1em' }}>
@@ -110,10 +110,12 @@ export default function () {
 
         </div>
 
-        <div className="portfolio-description" style={{}}>
+        <div className="portfolio-description">
           Coffee flavor profile visualizer for <a href='https://barringtoncoffee.com/' target='_blank'>
             Barrington Coffee Roasting Company
-          </a>, redesigned as an alternative to using static images. The component runs on Chart.js in React using TypeScript. Storing flavor profiles as flavor data instead of images enables discovery of similar coffees via a distance metric in 7-dimensional flavor space.
+          </a>, redesigned as an alternative to using static images.
+          The component runs on Chart.js in React using TypeScript.
+          Storing flavor data instead of images enables discovery of similar coffees via a distance metric in 7-dimensional flavor space.
         </div>
 
       </div>
