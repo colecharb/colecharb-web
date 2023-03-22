@@ -1,4 +1,4 @@
-import FlavorMeter, { Coffee, FlavorLevel } from "../../../flavor-meter/src/components/FlavorMeter";
+import FlavorMeter, { Coffee, FlavorLevel } from "./FlavorMeter";
 import { useState } from "react";
 
 export default function () {
