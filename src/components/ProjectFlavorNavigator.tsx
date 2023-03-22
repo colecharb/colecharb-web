@@ -64,7 +64,7 @@ export default function () {
 
 
   return (
-    <div>
+    <div className='portfolio-item'>
       <h3>Flavor Navigator</h3>
 
       <div style={{ display: 'flex', flexDirection: "column", flexWrap: 'wrap', justifyContent: 'center', gap: '1em', alignItems: 'center' }}>
