@@ -67,15 +67,15 @@ export default function () {
     <div>
       <h3>Flavor Navigator</h3>
 
-      <div style={{ display: 'flex', flexDirection: "row-reverse", flexWrap: "wrap", justifyContent: 'space-around' }}>
+      <div style={{ display: 'flex', flexDirection: "row-reverse", flexWrap: "wrap", justifyContent: 'center', gap: '1em' }}>
 
-        <div style={{}}>
-          <div style={{ width: '75vw', maxWidth: '350px', backgroundColor: 'white', borderRadius: '10px', padding: '1em' }}>
+        {/* <div style={{}}> */}
+        <div style={{ width: '75vw', maxWidth: '300px', backgroundColor: 'white', borderRadius: '10px', padding: '1em' }}>
             <FlavorMeter coffee={testCoffee} />
           </div>
-        </div>
+        {/* </div> */}
 
-        <table style={{ margin: '1em' }}>
+        <table style={{}}>
           {flavors.map(flavor => {
 
             const state = flavorStates[flavor];
@@ -100,16 +100,17 @@ export default function () {
                   />
                 </td>
               </tr>
-            )
+            );
           })}
         </table>
 
-      </div>
+        <div style={{}}>
+          Coffee flavor profile visualizer for <a href='https://barringtoncoffee.com/' target='_blank'>
+            Barrington Coffee Roasting Company
+          </a>, redesigned as an alternative to using static images. The component runs on Chart.js in React using TypeScript. Storing flavor profiles as flavor data instead of images enables discovery of similar coffees via a distance metric in 7-dimensional flavor space.
+        </div>
 
-      <div style={{}}>
-        Flavor profile visualizer for Barrington Coffee Roasting Company redesigned as an alternative to using static images. The component runs on Chart.js in React using TypeScript. Storing flavor profiles as flavor data instead of images enables discovery of similar coffees via a distance metric in 7-dimensional flavor space.
       </div>
-
     </div >
   )
 }
