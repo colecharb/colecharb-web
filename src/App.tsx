@@ -10,7 +10,7 @@ function App() {
 
   const tabs: Tab[] = [
     // { title: "About", path: '/' },
-    { title: "Portfolio", path: '/portfolio' },
+    { title: "Projects", path: '/projects' },
     { title: "Contact", path: '/contact' },
   ];
 
@@ -33,7 +33,7 @@ function App() {
         <div style={{ flex: 1 }}>
 
           <div className="tab-bar">
-            {tabs.map((tab, index) => (
+            {tabs.map((tab) => (
               <h2>
                 <NavLink
                   to={tab.path}
@@ -45,18 +45,16 @@ function App() {
             ))}
           </div>
 
-
         </div>
 
       </div>
 
       <div className="line-horizontal" />
 
-
       <div className="section">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/portfolio" element={<ProjectsPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
