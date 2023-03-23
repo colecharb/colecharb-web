@@ -30,10 +30,6 @@ function App() {
           </NavLink>
         </h2>
 
-        {/* <span style={{ fontSize: '1.2em', lineHeight: '120%' }}>
-          Cole Charbonneau
-        </span> */}
-
         <div style={{ flex: 1 }}>
 
           <div className="tab-bar">
