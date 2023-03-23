@@ -4,5 +4,5 @@
 export type App = {
   title: string,
   subtitle?: string,
-  description?: string,
+  abstract?: string,
 }

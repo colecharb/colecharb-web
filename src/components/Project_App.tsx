@@ -43,7 +43,7 @@ export default function ({ app }: { app: App }) {
         })}
 
         <div className='portfolio-description'>
-          {app.description}
+          {app.abstract}
         </div>
 
 
