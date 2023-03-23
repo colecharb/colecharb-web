@@ -1,8 +1,8 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
-import About from './components/About';
-import ContactInfo from './components/ContactInfo';
-import Portfolio from './components/Portfolio';
+import HomePage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
+import ProjectsPage from './components/ProjectsPage';
 
 type Tab = { title: string, path: string };
 
@@ -10,14 +10,14 @@ function App() {
 
   const tabs: Tab[] = [
     // { title: "About", path: '/' },
-    { title: "Portfolio", path: '/portfolio' },
+    { title: "Projects", path: '/projects' },
     { title: "Contact", path: '/contact' },
   ];
 
   return (
     <div className="App">
 
-      <div className="line-horizontal" />
+      {/* <div className="line-horizontal" /> */}
 
       <div style={{ display: 'flex', alignItems: 'center', padding: '0.25em', gap: '1em' }}>
 
@@ -30,14 +30,10 @@ function App() {
           </NavLink>
         </h2>
 
-        {/* <span style={{ fontSize: '1.2em', lineHeight: '120%' }}>
-          Cole Charbonneau
-        </span> */}
-
         <div style={{ flex: 1 }}>
 
           <div className="tab-bar">
-            {tabs.map((tab, index) => (
+            {tabs.map((tab) => (
               <h2>
                 <NavLink
                   to={tab.path}
@@ -49,19 +45,17 @@ function App() {
             ))}
           </div>
 
-
         </div>
 
       </div>
 
       <div className="line-horizontal" />
 
-
       <div className="section">
         <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<ContactInfo />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
 
