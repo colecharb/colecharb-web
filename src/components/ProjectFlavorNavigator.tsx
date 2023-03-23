@@ -1,4 +1,4 @@
-import FlavorMeter, { Coffee, FlavorLevel } from "./FlavorMeter";
+import FlavorMeter, { Coffee, FlavorLevel, FlavorLevels, FlavorName } from "./FlavorMeter";
 import { useState } from "react";
 
 export default function () {
@@ -11,7 +11,7 @@ export default function () {
   const fruitState = useState<FlavorLevel>(2);
   const caramelState = useState<FlavorLevel>(2);
 
-  const flavors = [
+  const flavors: FlavorName[] = [
     'chocolate',
     'spice',
     'nut',
@@ -21,7 +21,7 @@ export default function () {
     'caramel'
   ]
 
-  const flavorStates = {
+  const flavorStates: { [key in FlavorName]: [FlavorLevel, React.Dispatch<React.SetStateAction<FlavorLevel>>] } = {
     chocolate: chocolateState,
     spice: spiceState,
     nut: nutState,
@@ -56,9 +56,9 @@ export default function () {
   }
 
   const stableSet = (value: string, setState: React.Dispatch<React.SetStateAction<FlavorLevel>>) => {
-    const parsedInt = parseInt(value);
+    const parsedInt = parseInt(value) as FlavorLevel;
     if (0 <= parsedInt && parsedInt <= 4) {
-      setState(value);
+      setState(parsedInt);
     }
   }
 
