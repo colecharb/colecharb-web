@@ -1,8 +1,8 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
-import About from './components/About';
-import ContactInfo from './components/ContactInfo';
-import Portfolio from './components/ProjectsPage';
+import HomePage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
+import ProjectsPage from './components/ProjectsPage';
 
 type Tab = { title: string, path: string };
 
@@ -59,9 +59,9 @@ function App() {
 
       <div className="section">
         <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<ContactInfo />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/portfolio" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
 
