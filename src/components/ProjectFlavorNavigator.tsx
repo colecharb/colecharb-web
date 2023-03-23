@@ -114,14 +114,14 @@ export default function () {
         </div>
 
 
-        <span style={{ minWidth: '50vw' }} className="portfolio-item-abstract">
+        <div style={{ minWidth: '30vw' }} className="portfolio-item-abstract">
           Flavor profile visualizer for <a href='https://barringtoncoffee.com/' target='_blank'>
             Barrington Coffee Roasting Company
           </a>, redesigned as an alternative to using static images.
           The component runs on Chart.js in a Typescript React app.
-        </span>
-
         </div>
+
+      </div>
 
       <div className="portfolio-item-description">
         <p>
