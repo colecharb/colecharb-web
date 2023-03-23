@@ -27,7 +27,7 @@ export default function ({ app }: { app: App }) {
         </span> */}
       </h3>
 
-      <div className="portfolio-item-container">
+      <div className="portfolio-item-content-container">
 
         {[1, 2, 3].map(n => {
           return (
@@ -42,12 +42,13 @@ export default function ({ app }: { app: App }) {
           )
         })}
 
-        <div className='portfolio-description'>
+        <div className='portfolio-item-abstract'>
           {app.abstract}
         </div>
-
-
       </div>
+
+      {/* < */}
+
     </div>
   )
 }
