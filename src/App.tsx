@@ -2,7 +2,7 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import ContactInfo from './components/ContactInfo';
-import Portfolio from './components/Portfolio';
+import Portfolio from './components/ProjectsPage';
 
 type Tab = { title: string, path: string };
 
