@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
 
-      <div className="line-horizontal" />
+      {/* <div className="line-horizontal" /> */}
 
       <div style={{ display: 'flex', alignItems: 'center', padding: '0.25em', gap: '1em' }}>
 
