@@ -18,7 +18,7 @@
   },
   "include": [
     "src",
-    "src/data/portfolioItems.ts"
+    "src/data/appProjects.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

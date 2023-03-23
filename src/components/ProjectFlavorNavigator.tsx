@@ -67,9 +67,12 @@ export default function () {
     <div className='portfolio-item'>
       <h3>Flavor Navigator</h3>
 
-      <div style={{ display: 'flex', flexDirection: "column", flexWrap: 'wrap', justifyContent: 'center', gap: '1em', alignItems: 'center' }}>
+      <div
+        className="portfolio-item-content-container"
+      // style={{ display: 'flex', flexDirection: "column", flexWrap: 'wrap', justifyContent: 'center', gap: '2em', alignItems: 'center', paddingBottom: '1em' }}
+      >
 
-        <div style={{ display: 'flex', flexDirection: "row-reverse", flexWrap: "wrap", justifyContent: 'center', gap: '1em', padding: '1em' }}>
+        <div style={{ display: 'flex', flexDirection: "row-reverse", flexWrap: "wrap", justifyContent: 'center', gap: '2em' }}>
 
         {/* <div style={{}}> */}
         <div style={{ width: '75vw', maxWidth: '300px', backgroundColor: 'white', borderRadius: '10px', padding: '1em' }}>
@@ -110,15 +113,30 @@ export default function () {
 
         </div>
 
-        <div className="portfolio-description">
-          Coffee flavor profile visualizer for <a href='https://barringtoncoffee.com/' target='_blank'>
+
+        <span style={{ minWidth: '50vw' }} className="portfolio-item-abstract">
+          Flavor profile visualizer for <a href='https://barringtoncoffee.com/' target='_blank'>
             Barrington Coffee Roasting Company
           </a>, redesigned as an alternative to using static images.
-          The component runs on Chart.js in React using TypeScript.
-          Storing flavor data instead of images enables discovery of similar coffees via a distance metric in 7-dimensional flavor space.
+          The component runs on Chart.js in a Typescript React app.
+        </span>
+
         </div>
 
+      <div className="portfolio-item-description">
+        <p>
+          This project was my first foray into desigining a standalone React app for integration into a preexisting site.
+          In working on this project, I learned a lot about state variables in React and making charts with Chart.js.
+          Fortunately, state management in React.js is very similar to that in React Native, which I was quite familiar with already.
+        </p>
+
+        <p>
+          Next, I plan to define a distance metric on the above 7-dimensional flavor space to enable discovery of similar coffees.
+        </p>
       </div>
+
+
+
 
     </div >
   )

@@ -1,4 +1,4 @@
-import { appProjects } from "../data/portfolioItems";
+import appProjects from "../data/appProjects";
 import ProjectFlavorNavigator from "./ProjectFlavorNavigator";
 import Project_App from "./Project_App";
 
