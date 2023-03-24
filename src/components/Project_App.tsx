@@ -33,7 +33,7 @@ export default function ({ app, children }: { app: App, children?: ReactNode }) 
         {[1, 2, 3].map(n => {
           return (
             <img
-              src={`images/${app.title}/${n}-2.png`}
+              src={`images/${app.title}/${n}.png`}
               className='screenshot'
               style={{
                 rotate: `${randomAngle(n)}deg`,
