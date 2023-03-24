@@ -5,8 +5,8 @@ export default function () {
   return (
     <Project_App app={appProjects.ClearCast}>
       <p>
-        I have always felt that most weather apps overcomplicate their UI.
-        With ClearCast, I focused on a minimalist interface and prioritized the following tenets:
+        I have always felt that most weather apps overcomplicate their UI;
+        with ClearCast, I focused on a minimalist interface built around the following tenets:
         <ul style={{ fontStyle: 'italic' }}>
           <li>
             Most people want a weather app that is intuitive, rather than one that is feature-rich.
