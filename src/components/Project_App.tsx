@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 import '../App.css'
 import { App } from '../types'
 
-export default function ({ app }: { app: App }) {
+export default function ({ app, children }: { app: App, children?: ReactNode }) {
 
   const randomAngle = (n?: number) => {
     const angle = 4 * Math.random() + 1;
@@ -47,7 +48,7 @@ export default function ({ app }: { app: App }) {
         </div>
       </div>
 
-      {/* < */}
+      {children}
 
     </div>
   )
