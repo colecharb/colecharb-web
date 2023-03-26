@@ -20,7 +20,7 @@ export default function () {
         Developing intuitive and appealing user experiences is what I'm all about.
       </p>
       <p>
-        Check out the <Link to="/projects">projects tab</Link> for examples of my work and feel free to contact me if you're interested in working together.
+        Check out the projects tab for examples of my work and feel free to contact me if you're interested in working together.
         I'm always excited to take on new challenges.
       </p>
       <p>
