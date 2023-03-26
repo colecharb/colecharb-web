@@ -8,6 +8,7 @@ type Tab = { title: string, path: string };
 
 function App() {
 
+  // open external links in new tab/window
   window.addEventListener("DOMContentLoaded", function externalLinks() {
     var anchors = document.getElementsByTagName("a");
     for (var i = 0; i < anchors.length; i++) {
