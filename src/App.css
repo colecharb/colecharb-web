@@ -32,6 +32,7 @@
   background: none;
   color: var(--medium);
     font-variant: small-caps;
+    text-decoration: none;
 }
 
 .active {
