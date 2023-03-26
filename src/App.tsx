@@ -8,6 +8,16 @@ type Tab = { title: string, path: string };
 
 function App() {
 
+  window.addEventListener("DOMContentLoaded", function externalLinks() {
+    var anchors = document.getElementsByTagName("a");
+    for (var i = 0; i < anchors.length; i++) {
+      if (anchors[i].hostname !== window.location.hostname) {
+        anchors[i].setAttribute("target", "_blank");
+        anchors[i].setAttribute("rel", "noopener");
+      }
+    }
+  });
+
   const tabs: Tab[] = [
     // { title: "About", path: '/' },
     { title: "Projects", path: '/projects' },
