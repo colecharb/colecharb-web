@@ -21,7 +21,7 @@ export default function ({ app, children }: { app: App, children?: ReactNode }) 
   return (
     <div className='portfolio-item'>
 
-      <h3>
+      <h3 className='big-text'>
         {app.title}
         {/* <span className='portfolio-item-title subtitle'>
           {' ' + app.subtitle}

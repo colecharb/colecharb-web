@@ -19,7 +19,7 @@ export default function () {
 
     <>
 
-      <h3>
+      <h3 className='big-text'>
         Flavor Navigator
       </h3>
 
