@@ -34,9 +34,9 @@ export default function ({ coffee }: { coffee: Coffee }) {
         {coffee.roast}
       </p>
 
-      <p>
+      {/* <p>
         {coffee.description}
-      </p>
+      </p> */}
 
     </>
   )
