@@ -21,7 +21,7 @@ export default function ({ app, children }: { app: App, children?: ReactNode }) 
   return (
     <div className='portfolio-item'>
 
-      <h3 className='portfolio-item-title'>
+      <h3>
         {app.title}
         {/* <span className='portfolio-item-title subtitle'>
           {' ' + app.subtitle}
@@ -48,7 +48,7 @@ export default function ({ app, children }: { app: App, children?: ReactNode }) 
         </div>
       </div>
 
-      {children}
+      {children ?? null}
 
     </div>
   )

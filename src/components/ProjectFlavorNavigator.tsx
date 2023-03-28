@@ -17,11 +17,15 @@ export default function () {
 
   return (
 
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2em' }}>
+    <>
 
-      <h3 className='portfolio-item-title'>
+      <h3>
         Flavor Navigator
       </h3>
+
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2em' }}>
+
+
 
       <div style={{ minWidth: '30vw' }} className="portfolio-item-abstract">
         Flavor profile visualizer for <a href='https://barringtoncoffee.com/' target='_blank'>
@@ -104,5 +108,6 @@ export default function () {
       </div>
 
     </div>
+    </>
   );
 }

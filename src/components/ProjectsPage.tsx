@@ -7,10 +7,6 @@ export default function () {
   return (
     <>
 
-      {/* {appProjects.map(app => (
-        <Project_App app={app} />
-      ))} */}
-
       <ProjectClearCast />
 
       <ProjectPocketChange />
