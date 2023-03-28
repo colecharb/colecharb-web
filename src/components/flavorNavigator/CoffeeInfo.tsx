@@ -5,7 +5,7 @@ import HorizontalLine from "./HorizontalLine";
 export default function ({ coffee }: { coffee: Coffee }) {
   return (
     <>
-      <HorizontalLine />
+      {/* <HorizontalLine /> */}
 
       <h4 style={{ fontSize: 30 }}>
         {coffee.name}
