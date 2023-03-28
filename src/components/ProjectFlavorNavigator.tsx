@@ -50,7 +50,7 @@ export default function () {
             flex: 1,
             minWidth: '300px',
             maxWidth: '400px',
-            justifyContent: 'center',
+            // justifyContent: 'center',
           }}>
 
             {/* <HorizontalLine /> */}
