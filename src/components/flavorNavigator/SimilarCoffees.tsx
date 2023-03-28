@@ -5,7 +5,7 @@ export const THRESHOLD = 3.5;
 
 export default function ({ index, coffees, setCoffeeIndex }: { index: number, coffees: Coffee[], setCoffeeIndex: React.Dispatch<React.SetStateAction<number>> }) {
 
-  // const coffee = coffees[index];
+  const coffee = coffees[index];
 
   const similarCoffeeIndices = getSimilarCoffeeIndices({
     toIndex: index,
@@ -16,11 +16,13 @@ export default function ({ index, coffees, setCoffeeIndex }: { index: number, co
   const topSimilarCoffeeIndices = (n: number = 5) => getCoffeeDistances({
     toIndex: index,
     from: coffees
-  }).sort((a, b) =>
+  }).filter((obj) =>
+    obj.coffee.name !== coffee.name
+  ).sort((a, b) =>
     a.distance - b.distance
   ).map((value) =>
     value.index
-  ).slice(1, 1 + n);
+  ).slice(0, n);
 
   console.log(similarCoffeeIndices);
 
