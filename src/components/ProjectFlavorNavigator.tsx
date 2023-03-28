@@ -82,7 +82,7 @@ export default function () {
         </h4>
 
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5em' }}>
-          {coffees.map((coffee, index) =>
+            {coffees.sort((c1, c2) => (c1.name < c2.name) ? -1 : 1).map((coffee, index) =>
             <button
               onClick={() => setCoffeeIndex(index)}
             >
