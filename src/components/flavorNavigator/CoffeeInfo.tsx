@@ -1,4 +1,3 @@
-import testCoffee from "../coffees";
 import { Coffee, coffeeInfoListItems } from "./FlavorMeter";
 import HorizontalLine from "./HorizontalLine";
 
@@ -27,6 +26,13 @@ export default function ({ coffee }: { coffee: Coffee }) {
           </div>
         ))}
       </p> */}
+
+      <p>
+        <span style={{ fontWeight: 'bold', textTransform: 'capitalize' }}>
+          {`Roast – `}
+        </span>
+        {coffee.roast}
+      </p>
 
       <p>
         {coffee.description}
