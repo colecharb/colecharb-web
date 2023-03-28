@@ -10,7 +10,7 @@ import { PolarArea } from "react-chartjs-2";
 
 export type FlavorLevel = 0 | 1 | 2 | 3 | 4;
 const MAX_FLAVOR = 4;
-const FALVOR_SCALE_MIN = -1; // allowance for logo in center
+const FALVOR_SCALE_MIN = 0; // allowance for logo in center
 const FLAVOR_SCALE_MAX = 4;
 
 
