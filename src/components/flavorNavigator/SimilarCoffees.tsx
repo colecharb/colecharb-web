@@ -1,6 +1,8 @@
 import { Coffee, FlavorName } from "./FlavorMeter";
 import HorizontalLine from "./HorizontalLine";
 
+export const THRESHOLD = 3;
+
 export default function ({ index, coffees, setCoffeeIndex }: { index: number, coffees: Coffee[], setCoffeeIndex: React.Dispatch<React.SetStateAction<number>> }) {
 
   // const coffee = coffees[index];
@@ -8,7 +10,7 @@ export default function ({ index, coffees, setCoffeeIndex }: { index: number, co
   const similarCoffeeIndices = getSimilarCoffeeIndices({
     toIndex: index,
     from: coffees,
-    threshold: 3,
+    threshold: THRESHOLD,
   });
 
   console.log(similarCoffeeIndices);

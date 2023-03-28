@@ -4,7 +4,7 @@ import CoffeeInfo from "./flavorNavigator/CoffeeInfo";
 import coffees from "./flavorNavigator/coffees";
 import FlavorMeter from "./flavorNavigator/FlavorMeter";
 import HorizontalLine from "./flavorNavigator/HorizontalLine";
-import SimilarCoffees from "./flavorNavigator/SimilarCoffees";
+import SimilarCoffees, { THRESHOLD } from "./flavorNavigator/SimilarCoffees";
 
 export default function () {
 
@@ -96,15 +96,21 @@ export default function () {
 
 
       <div className="portfolio-item-description">
-        <p>
-          This project was my first foray into desigining a standalone React app for integration into a preexisting site.
+
+          <p>
+            Flavor data for each coffee is received by the component and displayed in a polar area graph, an intuitive visual representation of a point in seven-dimensional "flavor space."
+            Similar coffees are obtained by calculating the euclidean distance between the selected coffee and each other coffee in the list.
+            If this distance is less than the threshold (in this case, {THRESHOLD}), the coffees are considered similar.
+          </p>
+
+          <p>
+            This project was my first foray into desigining a React app for integration into a preexisting site.
           In working on this project, I learned a lot about state variables in React and making charts with Chart.js.
           Fortunately, state management in React.js is very similar to that in React Native, which I was quite familiar with already.
         </p>
 
-        <p>
-          Next, I plan to define a distance metric on the above 7-dimensional flavor space to enable discovery of similar coffees.
-        </p>
+
+
       </div>
 
     </div>
