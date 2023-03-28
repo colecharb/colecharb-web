@@ -9,9 +9,11 @@ export default function () {
 
       <ProjectClearCast />
 
+      <ProjectFlavorNavigator />
+
       <ProjectPocketChange />
 
-      <ProjectFlavorNavigator />
+
 
     </>
 
