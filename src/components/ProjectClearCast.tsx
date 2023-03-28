@@ -24,7 +24,7 @@ export default function () {
         and layout animations allow the app to smoothly and convincingly adjust to show as much or little information as the user needs.
       </p>
       <p>
-        ClearCast is currently available on TestFlight via invite. <Link to="/contact">Let me know</Link> if you'd like to be a tester!
+        ClearCast is available on <Link to='https://testflight.apple.com/join/cACir7Ck'>TestFlight</Link>.
         Check out the <a href="https://github.com/colecharb/ClearCast">GitHub repo</a>.
       </p>
     </Project_App>

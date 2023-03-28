@@ -104,7 +104,7 @@ export default function () {
           </p>
 
           <p>
-            This project was my first foray into desigining a React app for integration into a preexisting site.
+            This project was my first foray into desigining a React application for integration into a preexisting site.
           In working on this project, I learned a lot about state variables in React and making charts with Chart.js.
           Fortunately, state management in React.js is very similar to that in React Native, which I was quite familiar with already.
         </p>
