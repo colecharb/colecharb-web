@@ -47,7 +47,7 @@ const getSimilarCoffeeIndices = ({ toIndex, from, threshold }: { toIndex: number
 
   return [...Array(coffees.length).keys()].filter((i) =>
     coffee.name !== coffees[i].name
-    && coffee.roast === coffees[i].roast
+    // && coffee.roast === coffees[i].roast
     && euclidean(coffee, coffees[i]) <= threshold
   );
 }
