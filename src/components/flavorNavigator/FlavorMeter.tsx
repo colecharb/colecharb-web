@@ -98,9 +98,6 @@ export default function ({ coffee }: { coffee: Coffee }) {
             animateScale: true,
           },
           responsive: true,
-          onResize(chart, size) {
-
-          },
           maintainAspectRatio: true,
           aspectRatio: 1,
           scales: {
