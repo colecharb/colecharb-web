@@ -99,8 +99,8 @@ export default function () {
 
           <p>
             Flavor data for each coffee is received by the component and displayed in a polar area graph, an intuitive visual representation of a point in seven-dimensional "flavor space."
-            Similar coffees are obtained by calculating the euclidean distance between the selected coffee and each other coffee in the list.
-            If this distance is less than the threshold (in this case, {THRESHOLD}), the coffees are considered similar.
+            The component first calculates the euclidean distance between the selected coffee and each other coffee in the list.
+            After sorting the list by decreasing similarity, the five most similar coffees are displayed.
           </p>
 
           <p>
