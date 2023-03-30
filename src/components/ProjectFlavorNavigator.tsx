@@ -4,7 +4,7 @@ import CoffeeInfo from "./flavorNavigator/CoffeeInfo";
 import coffees from "./flavorNavigator/coffees";
 import FlavorMeter from "./flavorNavigator/FlavorMeter";
 import HorizontalLine from "./flavorNavigator/HorizontalLine";
-import SimilarCoffees, { THRESHOLD } from "./flavorNavigator/SimilarCoffees";
+import SimilarCoffees, { NUMBER_SIMILAR, THRESHOLD } from "./flavorNavigator/SimilarCoffees";
 
 export default function () {
 
@@ -100,7 +100,7 @@ export default function () {
           <p>
             Flavor data for each coffee is received by the component and displayed in a polar area graph, an intuitive visual representation of a point in seven-dimensional "flavor space."
             The component first calculates the euclidean distance between the selected coffee and each other coffee in the list.
-            After sorting the list by decreasing similarity, the five most similar coffees are displayed.
+            After sorting the list by decreasing similarity, the {NUMBER_SIMILAR} most similar coffees are displayed.
           </p>
 
           <p>
