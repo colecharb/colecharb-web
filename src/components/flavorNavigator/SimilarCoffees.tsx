@@ -1,7 +1,8 @@
 import { Coffee, FlavorName } from "./FlavorMeter";
 import HorizontalLine from "./HorizontalLine";
 
-export const THRESHOLD = 3.5;
+export const THRESHOLD = 100;
+export const NUMBER_SIMILAR = 3;
 
 export default function ({ index, coffees, setCoffeeIndex }: { index: number, coffees: Coffee[], setCoffeeIndex: React.Dispatch<React.SetStateAction<number>> }) {
 
@@ -18,6 +19,8 @@ export default function ({ index, coffees, setCoffeeIndex }: { index: number, co
     from: coffees
   }).filter((obj) =>
     obj.coffee.name !== coffee.name
+    && obj.coffee.roast === coffee.roast
+    // && obj.distance <= THRESHOLD
   ).sort((a, b) =>
     a.distance - b.distance
   ).map((value) =>
@@ -31,11 +34,11 @@ export default function ({ index, coffees, setCoffeeIndex }: { index: number, co
       <HorizontalLine />
 
       <h4>
-        Most Similar Coffees
+        Similar Coffees
       </h4>
 
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '0.5em' }}>
-        {topSimilarCoffeeIndices(5).map(i => (
+        {topSimilarCoffeeIndices(NUMBER_SIMILAR).map(i => (
           <button
             onClick={() => setCoffeeIndex(i)}
           // style={{ textAlign: 'left', paddingLeft: '0px' }}
