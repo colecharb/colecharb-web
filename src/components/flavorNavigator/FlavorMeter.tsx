@@ -129,6 +129,9 @@ export default function ({ coffee }: { coffee: Coffee }) {
             legend: {
               display: false,
             },
+            tooltip: {
+              enabled: false,
+            }
             // datalabels: {
             //   display: false,
             //   formatter: (value, context: Context) => (context.chart.data.labels[context.dataIndex] ?? null),
