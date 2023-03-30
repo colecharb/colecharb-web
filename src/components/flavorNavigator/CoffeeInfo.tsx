@@ -6,7 +6,7 @@ export default function ({ coffee }: { coffee: Coffee }) {
     <>
       {/* <HorizontalLine /> */}
 
-      <h4 style={{ fontSize: 30 }}>
+      <h4 style={{ fontSize: '1.6em' }}>
         {coffee.name}
       </h4>
 
