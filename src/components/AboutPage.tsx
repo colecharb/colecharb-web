@@ -6,7 +6,7 @@ export default function () {
       {/* <h2>About</h2> */}
 
       <p className='big-text'>
-        Front-end engineer and UX designer.
+        Full-stack engineer and UX designer.
         Currently developing for iOS at PocketChange.
         {/* <a className='poch' href='https://pocketchangeapp.ca' target='_blank'>
           <span className='poch'>PocketChange</span>
