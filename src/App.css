@@ -46,6 +46,14 @@
 }
 
 */
+
+.employer {
+  text-decoration: none;
+}
+.employer:hover {
+  text-decoration: underline;
+}
+
 .big-text {
   /* color: var(--subtle); */
   font-size: clamp(30pt, 8vw, 60pt);
