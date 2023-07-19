@@ -1,13 +1,18 @@
 import { FaLinkedin } from "react-icons/fa";
 import { GiEnvelope, GiRotaryPhone } from "react-icons/gi";
-import { GoGitBranch } from "react-icons/go";
+import { GoGitBranch, GoGitPullRequest } from "react-icons/go";
 
 export default function () {
   return (
     <div>
       <div className="contact-item">
         <GoGitBranch className="contact-icon" />
-        <a href="https://github.com/colecharb">GitHub</a>
+        <a href="https://github.com/colecharb">Personal GitHub</a>
+      </div>
+
+      <div className="contact-item">
+        <GoGitPullRequest className="contact-icon" />
+        <a href="https://github.com/colecharbonneau">Work GitHub</a>
       </div>
 
       <div className="contact-item">
