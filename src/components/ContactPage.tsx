@@ -1,5 +1,5 @@
 import { FaLinkedin } from "react-icons/fa";
-import { GiEnvelope, GiRotaryPhone } from "react-icons/gi";
+import { GiEnvelope } from "react-icons/gi";
 import { GoGitBranch, GoGitPullRequest } from "react-icons/go";
 
 export default function () {
@@ -23,11 +23,6 @@ export default function () {
       <div className="contact-item">
         <GiEnvelope className="contact-icon" />
         <a href="mailto:colecharb.dev@gmail.com">colecharb.dev@gmail.com</a>
-      </div>
-
-      <div className="contact-item">
-        <GiRotaryPhone className="contact-icon" />
-        <a href="tel:+14138541225">+1 (413) 854-1225</a>
       </div>
     </div>
   );
