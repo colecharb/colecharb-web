@@ -27,40 +27,49 @@ function App() {
 
   return (
     <div className="App">
-
       {/* <div className="line-horizontal" /> */}
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: "var(--background)",
+          zIndex: 10,
+          marginLeft: "calc(-0.7 * var(--margin))",
+          marginRight: "calc(-0.7 * var(--margin))",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            padding: "0.25em",
+            paddingLeft: "0.5em",
+            paddingRight: "0.5em",
+            gap: "1em",
+          }}
+        >
+          <h2>
+            <NavLink to="/" className="tab-button">
+              Cole Charbonneau
+            </NavLink>
+          </h2>
 
-      <div style={{ display: 'flex', alignItems: 'center', padding: '0.25em', gap: '1em' }}>
-
-        <h2>
-          <NavLink
-            to="/"
-            className='tab-button'
-          >
-            Cole Charbonneau
-          </NavLink>
-        </h2>
-
-        <div style={{ flex: 1 }}>
-
-          <div className="tab-bar">
-            {tabs.map((tab) => (
-              <h2>
-                <NavLink
-                  to={tab.path}
-                  className='tab-button'
-                >
-                  {tab.title}
-                </NavLink>
-              </h2>
-            ))}
+          <div style={{ flex: 1 }}>
+            <div className="tab-bar">
+              {tabs.map((tab) => (
+                <h2>
+                  <NavLink to={tab.path} className="tab-button">
+                    {tab.title}
+                  </NavLink>
+                </h2>
+              ))}
+            </div>
           </div>
-
         </div>
-
+        <div className="line-horizontal" />
       </div>
-
-      <div className="line-horizontal" />
 
       <div className="section">
         <Routes>
@@ -69,7 +78,6 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
-
     </div>
   );
 }

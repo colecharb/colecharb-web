@@ -19,9 +19,8 @@ export default function ({ app, children }: { app: App, children?: ReactNode }) 
   const randomShift = () => 1 * (2 * Math.random() - 1);
 
   return (
-    <div className='portfolio-item'>
-
-      <h3 className='big-text'>
+    <div>
+      <h3 className="big-text">
         {app.title}
         {/* <span className='portfolio-item-title subtitle'>
           {' ' + app.subtitle}
@@ -29,27 +28,23 @@ export default function ({ app, children }: { app: App, children?: ReactNode }) 
       </h3>
 
       <div className="portfolio-item-content-container">
-
-        {[1, 2, 3].map(n => {
+        {[1, 2, 3].map((n) => {
           return (
             <img
               src={`images/${app.title}/${n}.png`}
-              className='screenshot'
+              className="screenshot"
               style={{
                 rotate: `${randomAngle(n)}deg`,
                 translate: `0px ${randomShift()}rem`,
               }}
             />
-          )
+          );
         })}
 
-        <div className='portfolio-item-abstract'>
-          {app.abstract}
-        </div>
+        <div className="portfolio-item-abstract">{app.abstract}</div>
       </div>
 
       {children ?? null}
-
     </div>
-  )
+  );
 }
