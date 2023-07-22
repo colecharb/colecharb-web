@@ -1,10 +1,6 @@
-import appProjects from "../data/appProjects";
-import Project_App from "./Project_App";
+import appProjects from '../data/appProjects';
+import Project_App from './Project_App';
 
-export default function () {
-  return (
-    <Project_App app={appProjects.PocketChange} >
-
-    </Project_App>
-  )
+export default function ProjectPocketChange() {
+  return <Project_App app={appProjects.PocketChange} />;
 }

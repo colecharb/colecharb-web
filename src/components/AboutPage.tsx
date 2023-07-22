@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
-
-export default function () {
+export default function AboutPage() {
   return (
     <>
-      <p className="big-text">
-        Full-stack engineer and UX designer. Currently developing web apps for{" "}
+      <p className='big-text'>
+        Full-stack engineer and UX designer. Currently developing web apps for{' '}
         <a
-          className="employer"
-          href="https://certusinnovations.com"
-          target="_blank"
+          className='employer'
+          href='https://certusinnovations.com'
+          target='_blank'
+          rel='noreferrer'
         >
-          <span className="poch">Certus Innovations</span>
+          <span className='poch'>Certus Innovations</span>
         </a>
         .
       </p>
@@ -26,7 +25,7 @@ export default function () {
         contact me if you're interested in working together. I'm always excited
         to take on new challenges.
       </p>
-      <p>{"\u2013"} Cole</p>
+      <p>{'\u2013'} Cole</p>
     </>
   );
 }

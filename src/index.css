@@ -53,15 +53,15 @@ p {
 
 h1 {
   font-size: 1.2em;
-    line-height: 100%;
+  line-height: 100%;
   font-weight: normal;
   margin-bottom: 3rem;
   font-variant: small-caps;
 }
-  
+
 h2 {
   font-size: 1em;
-    font-weight: normal;
+  font-weight: normal;
   /* margin-bottom: 1rem; */
 }
 
@@ -86,7 +86,6 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
 
 button:focus,
 button:focus-visible {

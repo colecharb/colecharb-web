@@ -1,37 +1,45 @@
 // import FlavorMeter, { Coffee, FlavorLevel, FlavorLevels, FlavorName } from "./FlavorMeter";
-import { useState } from "react";
-import coffees from "./flavor-navigator/coffees";
-import CoffeeInfo from "./flavor-navigator/CoffeeInfo";
-import FlavorMeter from "./flavor-navigator/FlavorMeter";
-import HorizontalLine from "./flavor-navigator/HorizontalLine";
+import { useState } from 'react';
+import coffees from './flavor-navigator/coffees';
+import CoffeeInfo from './flavor-navigator/CoffeeInfo';
+import FlavorMeter from './flavor-navigator/FlavorMeter';
+import HorizontalLine from './flavor-navigator/HorizontalLine';
 import SimilarCoffees, {
   NUMBER_SIMILAR,
-} from "./flavor-navigator/SimilarCoffees";
+} from './flavor-navigator/SimilarCoffees';
 
-export default function () {
-
+export default function ProjectFlavorNavigator() {
   // init with random coffee from coffees
   const getRandomCoffeeIndex = () => Math.floor(Math.random() * coffees.length);
 
-  const [coffeeIndex, setCoffeeIndex] = useState<number>(getRandomCoffeeIndex());
+  const [coffeeIndex, setCoffeeIndex] = useState<number>(
+    getRandomCoffeeIndex()
+  );
 
   const coffee = coffees[coffeeIndex];
 
   return (
     <div>
-      <h3 className="big-text">Flavor Navigator</h3>
+      <h3 className='big-text'>Flavor Navigator</h3>
 
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "2em",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '2em',
         }}
       >
-        <div style={{ minWidth: "30vw" }} className="portfolio-item-abstract">
-          Flavor profile visualizer for{" "}
-          <a href="https://barringtoncoffee.com/" target="_blank">
+        <div
+          style={{ minWidth: '30vw' }}
+          className='portfolio-item-abstract'
+        >
+          Flavor profile visualizer for{' '}
+          <a
+            href='https://barringtoncoffee.com/'
+            target='_blank'
+            rel='noreferrer'
+          >
             Barrington Coffee Roasting Company
           </a>
           , redesigned as an alternative to using static images. The component
@@ -40,39 +48,39 @@ export default function () {
 
         <div
           style={{
-            border: "solid grey 1px",
-            borderRadius: "1em",
-            padding: "1em",
+            border: 'solid grey 1px',
+            borderRadius: '1em',
+            padding: '1em',
           }}
         >
           <div
             style={{
-              display: "flex",
-              flexWrap: "wrap",
-              flexDirection: "row",
-              justifyContent: "center",
-              gap: "2em",
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              gap: '2em',
             }}
           >
             <div
               style={{
-                display: "flex",
-                flexDirection: "column",
+                display: 'flex',
+                flexDirection: 'column',
                 // width: '50%',
                 flex: 1,
-                minWidth: "300px",
-                maxWidth: "400px",
+                minWidth: '300px',
+                maxWidth: '400px',
                 // justifyContent: 'center',
               }}
             >
               {/* <HorizontalLine /> */}
 
-              <div style={{ display: "block", width: "100%" }}>
+              <div style={{ display: 'block', width: '100%' }}>
                 <FlavorMeter coffee={coffee} />
               </div>
             </div>
 
-            <div style={{ flex: 2, minWidth: "300px" }}>
+            <div style={{ flex: 2, minWidth: '300px' }}>
               <CoffeeInfo coffee={coffee} />
 
               <SimilarCoffees
@@ -89,24 +97,27 @@ export default function () {
 
           <div
             style={{
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              gap: "0.5em",
+              display: 'flex',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '0.5em',
             }}
           >
             {coffees
               .sort((c1, c2) => (c1.name < c2.name ? -1 : 1))
               .map((coffee, index) => (
-                <button onClick={() => setCoffeeIndex(index)}>
+                <button
+                  key={coffee.name}
+                  onClick={() => setCoffeeIndex(index)}
+                >
                   {coffee.name}
                 </button>
               ))}
           </div>
         </div>
 
-        <div className="portfolio-item-description">
+        <div className='portfolio-item-description'>
           <p>
             Flavor data for each coffee is received by the component and
             displayed in a polar area graph, an intuitive visual representation

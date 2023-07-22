@@ -1,38 +1,37 @@
 #root {
-  
-    /* Variables */
-    --background: #272727;
-    --margin: 1rem;
-    --negative-margin: -0.5rem;
-    --border-width: 1px;
-    --medium: #fff6;
-    --subtle: #fff2;
-    --radius: 1rem;
-    /* Root styles */
-      max-width: 1000px;
-      /* min-width: 300; */
-      background-color: var(--background);
-      margin: 0 auto;
-      width: 100%;
-      padding: 1rem;
-      padding-top: 0;
-      font-size: clamp(12pt, 3vw, 18pt);
-      line-height: 125%;
-      margin-bottom: 0rem;
+  /* Variables */
+  --background: #272727;
+  --margin: 1rem;
+  --negative-margin: -0.5rem;
+  --border-width: 1px;
+  --medium: #fff6;
+  --subtle: #fff2;
+  --radius: 1rem;
+  /* Root styles */
+  max-width: 1000px;
+  /* min-width: 300; */
+  background-color: var(--background);
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  padding-top: 0;
+  font-size: clamp(12pt, 3vw, 18pt);
+  line-height: 125%;
+  margin-bottom: 0rem;
 }
 
 .tab-bar {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-    gap: 1em;
+  gap: 1em;
 }
 
 .tab-button {
   background: none;
   color: var(--medium);
-    font-variant: small-caps;
-    text-decoration: none;
+  font-variant: small-caps;
+  text-decoration: none;
 }
 
 .active {
@@ -137,7 +136,8 @@
   flex: 1;
 }
 
-*/ .portfolio-item-title {
+*/
+.portfolio-item-title {
   /* margin-top: 5rem; */
   margin-bottom: 3rem;
   /* font-size: xx-large; */
@@ -152,7 +152,7 @@
   flex: 1;
   min-width: 8.5em;
   max-width: 75%;
-    font-style: oblique;
+  font-style: oblique;
 }
 
 .portfolio-item-description {
@@ -170,6 +170,6 @@
   width: 20%;
   height: 100%;
   min-width: 8.5em;
-    /* filter: drop-shadow(0em 0.3em 0.2em #000f) */
-    /* margin: rem; */
+  /* filter: drop-shadow(0em 0.3em 0.2em #000f) */
+  /* margin: rem; */
 }
