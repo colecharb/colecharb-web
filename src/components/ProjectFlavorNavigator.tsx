@@ -1,10 +1,12 @@
 // import FlavorMeter, { Coffee, FlavorLevel, FlavorLevels, FlavorName } from "./FlavorMeter";
 import { useState } from "react";
-import CoffeeInfo from "./flavorNavigator/CoffeeInfo";
-import coffees from "./flavorNavigator/coffees";
-import FlavorMeter from "./flavorNavigator/FlavorMeter";
-import HorizontalLine from "./flavorNavigator/HorizontalLine";
-import SimilarCoffees, { NUMBER_SIMILAR, THRESHOLD } from "./flavorNavigator/SimilarCoffees";
+import coffees from "./flavor-navigator/coffees";
+import CoffeeInfo from "./flavor-navigator/CoffeeInfo";
+import FlavorMeter from "./flavor-navigator/FlavorMeter";
+import HorizontalLine from "./flavor-navigator/HorizontalLine";
+import SimilarCoffees, {
+  NUMBER_SIMILAR,
+} from "./flavor-navigator/SimilarCoffees";
 
 export default function () {
 
