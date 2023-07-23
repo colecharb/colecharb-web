@@ -2,7 +2,7 @@ export default function AboutPage() {
   return (
     <>
       <p className='big-text'>
-        Full-stack engineer and UX designer. Currently developing web apps for{' '}
+        Full-stack engineer and UX designer. Currently developing web apps at{' '}
         <a
           className='employer'
           href='https://certusinnovations.com'
