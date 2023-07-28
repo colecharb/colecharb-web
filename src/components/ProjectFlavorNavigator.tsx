@@ -7,6 +7,7 @@ import HorizontalLine from './flavor-navigator/HorizontalLine';
 import SimilarCoffees, {
   NUMBER_SIMILAR,
 } from './flavor-navigator/SimilarCoffees';
+import { FLAVOR_METRIC_RECORD } from './flavor-navigator/FlavorMetrics';
 
 export default function ProjectFlavorNavigator() {
   // init with random coffee from coffees
@@ -15,8 +16,11 @@ export default function ProjectFlavorNavigator() {
   const [coffeeIndex, setCoffeeIndex] = useState<number>(
     getRandomCoffeeIndex()
   );
+  const [flavorMetricName, setFlavorMetricName] =
+    useState<keyof typeof FLAVOR_METRIC_RECORD>('Pointwise');
 
   const coffee = coffees[coffeeIndex];
+  const flavorMetric = FLAVOR_METRIC_RECORD[flavorMetricName];
 
   return (
     <div>
@@ -87,8 +91,40 @@ export default function ProjectFlavorNavigator() {
                 index={coffeeIndex}
                 coffees={coffees}
                 setCoffeeIndex={setCoffeeIndex}
+                flavorMetric={flavorMetric}
               />
             </div>
+          </div>
+
+          <HorizontalLine />
+
+          <h4>Flavor Metric</h4>
+
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              gap: '0.5em',
+            }}
+          >
+            {Object.keys(FLAVOR_METRIC_RECORD).map((metricName) => (
+              <button
+                key={metricName}
+                style={
+                  metricName === flavorMetricName
+                    ? { textDecoration: 'underline' }
+                    : undefined
+                }
+                onClick={() =>
+                  setFlavorMetricName(
+                    metricName as keyof typeof FLAVOR_METRIC_RECORD
+                  )
+                }
+              >
+                {metricName}
+              </button>
+            ))}
           </div>
 
           <HorizontalLine />
@@ -110,6 +146,11 @@ export default function ProjectFlavorNavigator() {
                 <button
                   key={coffee.name}
                   onClick={() => setCoffeeIndex(index)}
+                  style={
+                    coffeeIndex === index
+                      ? { textDecoration: 'underline' }
+                      : undefined
+                  }
                 >
                   {coffee.name}
                 </button>
