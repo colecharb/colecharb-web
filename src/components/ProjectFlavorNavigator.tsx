@@ -97,6 +97,8 @@ export default function ProjectFlavorNavigator() {
 
           <HorizontalLine />
 
+          <h4>Flavor Metric</h4>
+
           <div
             style={{
               display: 'flex',
@@ -106,7 +108,6 @@ export default function ProjectFlavorNavigator() {
               gap: '0.5em',
             }}
           >
-            <h4 style={{ paddingRight: '1em', margin: 0 }}>Flavor Metric</h4>
             {Object.keys(FLAVOR_METRIC_RECORD).map((metricName) => (
               <button
                 key={metricName}

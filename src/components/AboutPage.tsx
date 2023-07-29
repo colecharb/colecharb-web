@@ -16,9 +16,9 @@ export default function AboutPage() {
 
       <p>
         Hi! I like making things. I'm a developer and designer with a background
-        in pure mathematics and an obsession with constantly learning and
-        improving my skills. Developing intuitive and appealing user experiences
-        is what I'm all about.
+        in pure math and an obsession with constantly learning and improving my
+        skills. Developing intuitive and appealing user experiences is what I'm
+        all about.
       </p>
       <p>
         Check out the projects tab for examples of my work and feel free to
