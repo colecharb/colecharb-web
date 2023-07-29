@@ -1,4 +1,3 @@
-import { title } from 'process';
 import type { IconType } from 'react-icons';
 import { FaLinkedin } from 'react-icons/fa';
 import { GiEnvelope } from 'react-icons/gi';
