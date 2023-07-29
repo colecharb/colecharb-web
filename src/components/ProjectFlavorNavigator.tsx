@@ -17,7 +17,7 @@ export default function ProjectFlavorNavigator() {
     getRandomCoffeeIndex()
   );
   const [flavorMetricName, setFlavorMetricName] =
-    useState<keyof typeof FLAVOR_METRIC_RECORD>('Pointwise');
+    useState<keyof typeof FLAVOR_METRIC_RECORD>('Euclidean');
 
   const coffee = coffees[coffeeIndex];
   const flavorMetric = FLAVOR_METRIC_RECORD[flavorMetricName];
@@ -63,18 +63,17 @@ export default function ProjectFlavorNavigator() {
               flexWrap: 'wrap',
               flexDirection: 'row',
               justifyContent: 'center',
-              gap: '2em',
+              gap: '1em',
             }}
           >
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                // width: '50%',
+                justifyContent: 'center',
                 flex: 1,
                 minWidth: '300px',
                 maxWidth: '400px',
-                // justifyContent: 'center',
               }}
             >
               {/* <HorizontalLine /> */}
@@ -98,16 +97,16 @@ export default function ProjectFlavorNavigator() {
 
           <HorizontalLine />
 
-          <h4>Flavor Metric</h4>
-
           <div
             style={{
               display: 'flex',
               flexDirection: 'row',
+              alignItems: 'center',
               flexWrap: 'wrap',
               gap: '0.5em',
             }}
           >
+            <h4 style={{ paddingRight: '1em', margin: 0 }}>Flavor Metric</h4>
             {Object.keys(FLAVOR_METRIC_RECORD).map((metricName) => (
               <button
                 key={metricName}
@@ -162,10 +161,10 @@ export default function ProjectFlavorNavigator() {
           <p>
             Flavor data for each coffee is received by the component and
             displayed in a polar area graph, an intuitive visual representation
-            of a point in seven-dimensional "flavor space." The component first
-            calculates the euclidean distance between the selected coffee and
-            each other coffee in the list. After sorting the list by decreasing
-            similarity, the {NUMBER_SIMILAR} most similar coffees are displayed.
+            of a point in seven-dimensional "flavor space." Using the selected
+            metric, the component calculates the distance between the selected
+            coffee and each other coffee in the list. The {NUMBER_SIMILAR} most
+            similar coffees are then displayed.
           </p>
 
           <p>
