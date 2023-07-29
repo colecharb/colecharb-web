@@ -35,7 +35,7 @@ export default function Project_App({
               className='screenshot'
               style={{
                 rotate: `${randomAngle(n)}deg`,
-                translate: `0px ${randomShift()}rem`,
+                translate: `0px ${randomShift()}em`,
               }}
             />
           );
