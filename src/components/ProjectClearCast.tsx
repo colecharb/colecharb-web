@@ -27,8 +27,6 @@ export default function ProjectClearCast() {
         user needs.
       </p>
       <p>
-        ClearCast is available on{' '}
-        <Link to='https://testflight.apple.com/join/cACir7Ck'>TestFlight</Link>.
         Check out the{' '}
         <a href='https://github.com/colecharb/ClearCast'>GitHub repo</a>.
       </p>
