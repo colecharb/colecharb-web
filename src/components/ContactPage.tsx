@@ -11,14 +11,14 @@ interface ContactItem {
 const CONTACT_ITEMS: readonly ContactItem[] = [
   {
     Icon: GoGitBranch,
-    title: 'Personal GitHub',
+    title: 'GitHub',
     href: 'https://github.com/colecharb',
   },
-  {
-    Icon: GoGitPullRequest,
-    title: 'Work GitHub',
-    href: 'https://github.com/colecharbonneau',
-  },
+  // {
+  //   Icon: GoGitPullRequest,
+  //   title: 'Work GitHub',
+  //   href: 'https://github.com/colecharbonneau',
+  // },
   {
     Icon: FaLinkedin,
     title: 'LinkedIn',
