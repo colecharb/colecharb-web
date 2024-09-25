@@ -3,17 +3,8 @@ export default function AboutPage() {
     <>
       <p className='big-text'>
         Full-stack engineer and UX designer.
-        Currently developing for web and mobile at
-        {' '}
-        <a
-          className='employer'
-          href='https://certusinnovations.com'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <span className='poch'>Certus Innovations</span>
-        </a>
-        .
+        Building high-performance web and mobile applications
+        with a focus on user experience and design innovation.
       </p>
 
       <p>
