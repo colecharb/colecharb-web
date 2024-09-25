@@ -1,7 +1,7 @@
 import type { IconType } from 'react-icons';
 import { FaLinkedin } from 'react-icons/fa';
 import { GiEnvelope } from 'react-icons/gi';
-import { GoGitBranch, GoGitPullRequest } from 'react-icons/go';
+import { GoGitBranch } from 'react-icons/go';
 
 interface ContactItem {
   Icon: IconType;
