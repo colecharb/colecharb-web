@@ -31,8 +31,8 @@ export default function Project_App({
           return (
             <img
               key={n}
-              src={`images/${app.title}/${n}.png`}
-              className='screenshot'
+              src={`/images/${app.title}/${n}.PNG`}
+              className="screenshot"
               style={{
                 rotate: `${randomAngle(n)}deg`,
                 translate: `0px ${randomShift()}em`,
