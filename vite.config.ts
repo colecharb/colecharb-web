@@ -8,4 +8,7 @@ export default defineConfig({
     outDir: 'dist',
   },
   appType: 'spa',
+  server: {
+    historyApiFallback: true,
+  },
 });
