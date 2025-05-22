@@ -14,7 +14,7 @@ export default function ProjectFlavorNavigator() {
   const getRandomCoffeeIndex = () => Math.floor(Math.random() * coffees.length);
 
   const [coffeeIndex, setCoffeeIndex] = useState<number>(
-    getRandomCoffeeIndex()
+    getRandomCoffeeIndex(),
   );
   const [flavorMetricName, setFlavorMetricName] =
     useState<keyof typeof FLAVOR_METRIC_RECORD>('Euclidean');
@@ -24,7 +24,7 @@ export default function ProjectFlavorNavigator() {
 
   return (
     <div>
-      <h3 className="big-text">Flavor Navigator</h3>
+      <h3 className='big-text'>Flavor Navigator</h3>
 
       <div
         style={{
@@ -36,17 +36,18 @@ export default function ProjectFlavorNavigator() {
       >
         <div
           style={{ minWidth: '30vw' }}
-          className="portfolio-item-abstract"
+          className='portfolio-item-abstract'
         >
           Flavor profile visualizer for{' '}
           <a
-            href="https://barringtoncoffee.com/"
-            target="_blank"
-            rel="noreferrer"
+            href='https://barringtoncoffee.com/'
+            target='_blank'
+            rel='noreferrer'
           >
             Barrington Coffee Roasting Company
           </a>
-          , redesigned as an alternative to using static images. The component runs on Chart.js in a Typescript React app.
+          , redesigned as an alternative to using static images. The component
+          runs on Chart.js in a Typescript React app.
         </div>
 
         <div
@@ -110,8 +111,16 @@ export default function ProjectFlavorNavigator() {
             {Object.keys(FLAVOR_METRIC_RECORD).map((metricName) => (
               <button
                 key={metricName}
-                style={metricName === flavorMetricName ? { textDecoration: 'underline' } : undefined}
-                onClick={() => setFlavorMetricName(metricName as keyof typeof FLAVOR_METRIC_RECORD)}
+                style={
+                  metricName === flavorMetricName
+                    ? { textDecoration: 'underline' }
+                    : undefined
+                }
+                onClick={() =>
+                  setFlavorMetricName(
+                    metricName as keyof typeof FLAVOR_METRIC_RECORD,
+                  )
+                }
               >
                 {metricName}
               </button>
@@ -137,7 +146,11 @@ export default function ProjectFlavorNavigator() {
                 <button
                   key={coffee.name}
                   onClick={() => setCoffeeIndex(index)}
-                  style={coffeeIndex === index ? { textDecoration: 'underline' } : undefined}
+                  style={
+                    coffeeIndex === index
+                      ? { textDecoration: 'underline' }
+                      : undefined
+                  }
                 >
                   {coffee.name}
                 </button>
@@ -145,11 +158,14 @@ export default function ProjectFlavorNavigator() {
           </div>
         </div>
 
-        <div className="portfolio-item-description">
+        <div className='portfolio-item-description'>
           <p>
-            Flavor data for each coffee is received by the component and displayed in a polar area graph, an intuitive visual representation of a point in
-            seven-dimensional "flavor space." Using the selected metric, the component calculates the distance between the selected coffee and each other coffee
-            in the list. The {NUMBER_SIMILAR} most similar coffees are then displayed.
+            Flavor data for each coffee is received by the component and
+            displayed in a polar area graph, an intuitive visual representation
+            of a point in seven-dimensional "flavor space." Using the selected
+            metric, the component calculates the distance between the selected
+            coffee and each other coffee in the list. The {NUMBER_SIMILAR} most
+            similar coffees are then displayed.
           </p>
         </div>
       </div>

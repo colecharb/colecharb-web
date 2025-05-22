@@ -1,12 +1,14 @@
 import { ReactNode } from 'react';
 import '../App.css';
-import { App } from '../types';
+import type { App } from '../data/appProjects';
 
 export default function Project_App({
   app,
+  hasImages = true,
   children,
 }: {
   app: App;
+  hasImages?: boolean;
   children?: ReactNode;
 }) {
   const randomAngle = (n?: number) => {
@@ -27,21 +29,27 @@ export default function Project_App({
       </h3>
 
       <div className='portfolio-item-content-container'>
-        {[1, 2, 3].map((n) => {
-          return (
-            <img
-              key={n}
-              src={`/images/${app.title}/${n}.PNG`}
-              className="screenshot"
-              style={{
-                rotate: `${randomAngle(n)}deg`,
-                translate: `0px ${randomShift()}em`,
-              }}
-            />
-          );
-        })}
+        {hasImages ? (
+          <>
+            {[1, 2, 3].map((n) => {
+              return (
+                <img
+                  key={n}
+                  src={`/images/${app.title}/${n}.PNG`}
+                  className='screenshot'
+                  style={{
+                    rotate: `${randomAngle(n)}deg`,
+                    translate: `0px ${randomShift()}em`,
+                  }}
+                />
+              );
+            })}
 
-        <div className='portfolio-item-abstract'>{app.abstract}</div>
+            <div className='portfolio-item-abstract'>{app.abstract}</div>
+          </>
+        ) : (
+          <div>{app.abstract}</div>
+        )}
       </div>
 
       {children ?? null}
