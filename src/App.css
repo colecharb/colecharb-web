@@ -172,3 +172,16 @@
   /* filter: drop-shadow(0em 0.3em 0.2em #000f) */
   /* margin: rem; */
 }
+
+/* for react-masonry-css */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -16px;
+  width: auto;
+  /* gap: 12px; */
+}
+
+.my-masonry-grid_column {
+  padding-left: 16px;
+  background-clip: padding-box;
+}
