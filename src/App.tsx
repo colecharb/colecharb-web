@@ -4,6 +4,8 @@ import HomePage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 
+import PhotosPage from './pages/PhotosPage';
+
 type Tab = { title: string; path: string };
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
 
   const tabs: Tab[] = [
     // { title: "About", path: '/' },
+    { title: 'Photos', path: '/photos' },
     { title: 'Projects', path: '/projects' },
     { title: 'Contact', path: '/contact' },
   ];
@@ -85,6 +88,10 @@ function App() {
           <Route
             path='/projects'
             element={<ProjectsPage />}
+          />
+          <Route
+            path='/photos'
+            element={<PhotosPage />}
           />
           <Route
             path='/contact'
