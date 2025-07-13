@@ -4,7 +4,6 @@ import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 import photos from '../photos';
-import BlurImage from '../components/BlurImage';
 
 export default function PhotosPage() {
   const [index, setIndex] = useState(-1);
@@ -30,7 +29,7 @@ export default function PhotosPage() {
         columnClassName='my-masonry-grid_column'
       >
         {shuffledPhotos.map((photo, i) => (
-          <BlurImage
+          <img
             key={photo}
             src={photo}
             style={{
