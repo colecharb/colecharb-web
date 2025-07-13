@@ -17,8 +17,8 @@ export default function PhotosPage() {
 
   const breakpointColumnsObj = {
     default: 3,
-    1100: 2,
-    700: 1,
+    800: 2,
+    // 700: 1,
   };
 
   return (
