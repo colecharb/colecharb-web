@@ -2,7 +2,7 @@ export default function AboutPage() {
   return (
     <>
       <p className='big-text'>
-        Helping small businesses and organizations grow with modern, easy-to-use
+        Helping businesses and organizations grow with modern, easy-to-use
         websites and apps.
       </p>
 
