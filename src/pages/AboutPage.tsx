@@ -7,10 +7,10 @@ export default function AboutPage() {
       </p>
 
       <p>
-        I'm Cole — a developer and designer who loves turning ideas into
-        polished, practical tools. Whether it's a simple website, a custom app,
-        or improving an existing online presence, I focus on creating
-        experiences that feel effortless for your customers and clients.
+        I love turning ideas into polished, practical tools. Whether it's a
+        simple website, a custom app, or improving an existing online presence,
+        I focus on creating experiences that feel effortless for your customers
+        and clients.
       </p>
 
       <p>
