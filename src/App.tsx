@@ -1,10 +1,9 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
-import HomePage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import ProjectsPage from './pages/ProjectsPage';
-
-import PhotosPage from './pages/PhotosPage';
+import HomePage from './pages/About';
+import ContactPage from './pages/Contact';
+import ProjectsPage from './pages/Projects';
+import PhotosPage from './pages/Photos';
 
 type Tab = { title: string; path: string };
 

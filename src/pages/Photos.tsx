@@ -8,12 +8,12 @@ import photos from '../photos';
 export default function PhotosPage() {
   const [index, setIndex] = useState(-1);
 
-  const [shuffledPhotos, setShuffledPhotos] = useState<string[]>([]);
+  // const [shuffledPhotos, setShuffledPhotos] = useState<string[]>([]);
 
-  const shufflePhotos = () =>
-    setShuffledPhotos(photos.sort(() => Math.random() - 0.5));
+  // const shufflePhotos = () =>
+  //   setShuffledPhotos(photos.sort(() => Math.random() - 0.5));
 
-  useEffect(() => shufflePhotos(), []);
+  // useEffect(() => shufflePhotos(), []);
 
   const breakpointColumnsObj = {
     default: 3,
@@ -28,7 +28,7 @@ export default function PhotosPage() {
         className='my-masonry-grid'
         columnClassName='my-masonry-grid_column'
       >
-        {shuffledPhotos.map((photo, i) => (
+        {photos.map((photo, i) => (
           <img
             key={photo}
             src={photo}
@@ -48,7 +48,7 @@ export default function PhotosPage() {
       <Lightbox
         open={index >= 0}
         close={() => setIndex(-1)}
-        slides={shuffledPhotos.map((src) => ({ src }))}
+        slides={photos.map((src) => ({ src }))}
         index={index}
         plugins={[Zoom]}
         on={{
