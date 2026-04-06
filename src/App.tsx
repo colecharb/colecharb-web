@@ -44,7 +44,7 @@ function App() {
         <div
           style={{
             display: 'flex',
-            alignItems: 'center',
+            alignItems: 'flex-end',
             padding: '0.25em',
             paddingLeft: '0.5em',
             paddingRight: '0.5em',
@@ -78,26 +78,33 @@ function App() {
         <div className='line-horizontal' />
       </div>
 
-      <div className='section'>
-        <Routes>
-          <Route
-            path='/'
-            element={<HomePage />}
-          />
-          <Route
-            path='/projects'
-            element={<ProjectsPage />}
-          />
-          <Route
-            path='/photos'
-            element={<PhotosPage />}
-          />
-          <Route
-            path='/contact'
-            element={<ContactPage />}
-          />
-        </Routes>
-      </div>
+      <Routes>
+        <Route
+          path='/contact'
+          element={<ContactPage />}
+        />
+        <Route
+          path='*'
+          element={
+            <div className='section'>
+              <Routes>
+                <Route
+                  path='/'
+                  element={<HomePage />}
+                />
+                <Route
+                  path='/projects'
+                  element={<ProjectsPage />}
+                />
+                <Route
+                  path='/photos'
+                  element={<PhotosPage />}
+                />
+              </Routes>
+            </div>
+          }
+        />
+      </Routes>
     </div>
   );
 }
