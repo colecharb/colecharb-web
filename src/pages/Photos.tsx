@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
@@ -13,16 +13,22 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+// Shuffle once at module load (persists across tab switches, resets on hard refresh)
+const shuffledPhotos = shuffle(photos);
+
 interface ImageDimensions {
   src: string;
   width: number;
   height: number;
 }
 
+let cachedDimensions: ImageDimensions[] | null = null;
+
 function useImageDimensions(srcs: string[]) {
-  const [dimensions, setDimensions] = useState<ImageDimensions[]>([]);
+  const [dimensions, setDimensions] = useState<ImageDimensions[]>(cachedDimensions ?? []);
 
   useEffect(() => {
+    if (cachedDimensions) return;
     let cancelled = false;
     Promise.all(
       srcs.map(
@@ -36,7 +42,10 @@ function useImageDimensions(srcs: string[]) {
           }),
       ),
     ).then((dims) => {
-      if (!cancelled) setDimensions(dims);
+      if (!cancelled) {
+        cachedDimensions = dims;
+        setDimensions(dims);
+      }
     });
     return () => {
       cancelled = true;
@@ -69,11 +78,18 @@ function useColumnCount(breakpoints: Record<number, number>, defaultCols: number
   return count;
 }
 
+interface PhotoItem {
+  src: string;
+  originalIndex: number;
+  width: number;
+  height: number;
+}
+
 function distributePhotos(
   dimensions: ImageDimensions[],
   numCols: number,
-): { src: string; originalIndex: number }[][] {
-  const columns: { src: string; originalIndex: number }[][] = Array.from(
+): PhotoItem[][] {
+  const columns: PhotoItem[][] = Array.from(
     { length: numCols },
     () => [],
   );
@@ -86,7 +102,7 @@ function distributePhotos(
     for (let c = 1; c < numCols; c++) {
       if (heights[c] < heights[shortest]) shortest = c;
     }
-    columns[shortest].push({ src: dim.src, originalIndex: i });
+    columns[shortest].push({ src: dim.src, originalIndex: i, width: dim.width, height: dim.height });
     heights[shortest] += aspectRatio;
   });
 
@@ -95,7 +111,6 @@ function distributePhotos(
 
 export default function PhotosPage() {
   const [index, setIndex] = useState(-1);
-  const shuffledPhotos = useMemo(() => shuffle(photos), []);
   const dimensions = useImageDimensions(shuffledPhotos);
   const numCols = useColumnCount({ 800: 2 }, 3);
 
@@ -112,6 +127,7 @@ export default function PhotosPage() {
                 src={photo.src}
                 style={{
                   width: '100%',
+                  aspectRatio: `${photo.width} / ${photo.height}`,
                   display: 'block',
                   borderRadius: '8px',
                   marginBottom: '16px',
