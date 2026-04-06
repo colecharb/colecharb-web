@@ -25,12 +25,13 @@
   flex-direction: row;
   justify-content: flex-end;
   gap: 1em;
+  font-size: 0.9em;
 }
 
 .tab-button {
   background: none;
   color: var(--medium);
-  font-variant: small-caps;
+  text-transform: lowercase;
   text-decoration: none;
 }
 
@@ -53,12 +54,46 @@
   text-decoration: underline;
 }
 
+.page-wrapper {
+  transition: opacity 0.25s ease;
+}
+
+.page-active {
+  opacity: 1;
+}
+
+.page-hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.about-page {
+  padding-top: 2em;
+}
+
 .big-text {
   /* color: var(--subtle); */
-  font-size: clamp(30pt, 8vw, 60pt);
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  font-size: clamp(24pt, 6.4vw, 48pt);
   line-height: 100%;
   font-weight: 900;
   margin-top: 0em;
+}
+
+.typewriter-cursor {
+  font-weight: 400;
+}
+
+.typewriter-cursor.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .align-right {
@@ -76,8 +111,8 @@
   margin-bottom: 2em;
 }
 .section {
-  margin-top: 2em;
-  margin-bottom: 4em;
+  margin-top: 4em;
+  margin-bottom: 8em;
 }
 
 .contact-info {
@@ -91,8 +126,9 @@
   flex-direction: row;
   align-items: center;
   gap: 12px;
-  padding: 0.5em 0;
+  padding: 0;
   width: max-content;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
 }
 
 .contact-icon {
@@ -103,7 +139,7 @@
   background-color: white;
   border-radius: 3px;
   color: black;
-  font-family: Garamond, serif;
+  font-family: 'Atkinson Hyperlegible Next', Garamond, serif;
   /* aspect-ratio: 3.5/2; */
   padding: 0.25in;
 }
@@ -173,15 +209,15 @@
   /* margin: rem; */
 }
 
-/* for react-masonry-css */
+/* masonry grid */
 .my-masonry-grid {
   display: flex;
   margin-left: -16px;
   width: auto;
-  /* gap: 12px; */
 }
 
 .my-masonry-grid_column {
   padding-left: 16px;
   background-clip: padding-box;
+  flex: 1;
 }
