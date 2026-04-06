@@ -31,14 +31,14 @@ const CONTACT_ITEMS: readonly ContactItem[] = [
   },
 ] as const;
 
-export default function ContactPage() {
-  const randomAngle = (n: number) => {
-    const angle = 8 * Math.random() + 2;
-    const sign = n % 2 ? -1 : 1;
-    return sign * angle;
-  };
+// Compute random angles/shifts once at module level
+const contactStyles = CONTACT_ITEMS.map((_, i) => {
+  const angle = (8 * Math.random() + 2) * (i % 2 ? -1 : 1);
+  const shift = (i % 2 ? 1 : -1) * (4 * Math.random());
+  return { angle, shift };
+});
 
-  const randomShift = (n: number) => (n % 2 ? 1 : -1) * (4 * Math.random());
+export default function ContactPage() {
 
   return (
     <div
@@ -55,8 +55,8 @@ export default function ContactPage() {
           key={item.title}
           className='contact-item'
           style={{
-            rotate: `${randomAngle(i)}deg`,
-            translate: `${randomShift(i)}rem 0px`,
+            rotate: `${contactStyles[i].angle}deg`,
+            translate: `${contactStyles[i].shift}rem 0px`,
           }}
         >
           {/* <item.Icon className='contact-icon' /> */}
