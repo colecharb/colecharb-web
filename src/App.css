@@ -54,6 +54,25 @@
   text-decoration: underline;
 }
 
+.page-wrapper {
+  transition: opacity 0.25s ease;
+}
+
+.page-active {
+  opacity: 1;
+}
+
+.page-hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.about-page {
+  padding-top: 2em;
+}
+
 .big-text {
   /* color: var(--subtle); */
   font-family: 'Atkinson Hyperlegible Mono', monospace;

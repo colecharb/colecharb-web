@@ -1,4 +1,5 @@
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import './App.css';
 import HomePage from './pages/About';
 import ContactPage from './pages/Contact';
@@ -8,6 +9,32 @@ import PhotosPage from './pages/Photos';
 type Tab = { title: string; path: string };
 
 function App() {
+  const { pathname } = useLocation();
+  const scrollPositions = useRef<Record<string, number>>({});
+  const prevPath = useRef(pathname);
+
+  // Continuously track scroll position for the active page
+  useEffect(() => {
+    const onScroll = () => {
+      scrollPositions.current[pathname] = window.scrollY;
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [pathname]);
+
+  // Restore scroll position when switching pages (before paint to avoid flash)
+  useLayoutEffect(() => {
+    prevPath.current = pathname;
+    window.scrollTo(0, scrollPositions.current[pathname] ?? 0);
+  }, [pathname]);
+
+  // Lock scroll on landing and contact pages (before paint to avoid flash)
+  useLayoutEffect(() => {
+    const noScroll = pathname === '/' || pathname === '/contact';
+    document.body.style.overflow = noScroll ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [pathname]);
+
   // open external links in new tab/window
   window.addEventListener('DOMContentLoaded', function externalLinks() {
     const anchors = document.getElementsByTagName('a');
@@ -26,19 +53,27 @@ function App() {
     { title: 'Contact', path: '/contact' },
   ];
 
+  const pages = [
+    { path: '/', element: <HomePage />, section: false },
+    { path: '/photos', element: <PhotosPage />, section: true },
+    { path: '/projects', element: <ProjectsPage />, section: true },
+    { path: '/contact', element: <ContactPage />, section: false },
+  ];
+
   return (
     <div className='App'>
       {/* <div className="line-horizontal" /> */}
       <div
         style={{
-          position: 'sticky',
+          position: 'fixed',
           top: 0,
           left: 0,
           right: 0,
           backgroundColor: 'var(--background)',
           zIndex: 10,
-          marginLeft: 'calc(-0.7 * var(--margin))',
-          marginRight: 'calc(-0.7 * var(--margin))',
+          maxWidth: '1000px',
+          margin: '0 auto',
+          padding: '0 1rem',
         }}
       >
         <div
@@ -78,33 +113,21 @@ function App() {
         <div className='line-horizontal' />
       </div>
 
-      <Routes>
-        <Route
-          path='/contact'
-          element={<ContactPage />}
-        />
-        <Route
-          path='*'
-          element={
-            <div className='section'>
-              <Routes>
-                <Route
-                  path='/'
-                  element={<HomePage />}
-                />
-                <Route
-                  path='/projects'
-                  element={<ProjectsPage />}
-                />
-                <Route
-                  path='/photos'
-                  element={<PhotosPage />}
-                />
-              </Routes>
-            </div>
-          }
-        />
-      </Routes>
+      {/* Spacer for fixed header */}
+      <div style={{ height: '5em' }} />
+
+      {pages.map(({ path, element, section }) => {
+        const active = pathname === path;
+        const content = section ? <div className='section'>{element}</div> : element;
+        return (
+          <div
+            key={path}
+            className={`page-wrapper ${active ? 'page-active' : 'page-hidden'}`}
+          >
+            {content}
+          </div>
+        );
+      })}
     </div>
   );
 }

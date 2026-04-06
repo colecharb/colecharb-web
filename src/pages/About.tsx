@@ -33,9 +33,11 @@
 
 import TypeWriter from '../components/TypeWriter';
 
-export default function AboutPage() {
+export default function AboutPage({ active }: { active?: boolean }) {
+
+
   return (
-    <>
+    <div className="about-page">
       <p className="big-text">
         <TypeWriter text="full-stack engineer. part-time everything else. building software, making coffee, figuring things out." />
       </p>
@@ -49,6 +51,6 @@ export default function AboutPage() {
       </p>
       <p>Say hi if you want to work together!</p>
       <p>{"\u2013"} Cole</p>
-    </>
+    </div>
   );
 }
