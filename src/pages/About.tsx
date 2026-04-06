@@ -31,26 +31,24 @@
 //   );
 // }
 
+import TypeWriter from '../components/TypeWriter';
+
 export default function AboutPage() {
   return (
     <>
-      <p className='big-text'>
-        Full-stack engineer and UX designer. Building high-performance web and
-        mobile applications with a focus on user experience and design.
+      <p className="big-text">
+        <TypeWriter text="full-stack engineer. part-time everything else. building software, making coffee, figuring things out." />
       </p>
 
       <p>
-        Hi! I like making things. I'm a developer and designer with a background
-        in pure math and an obsession with constantly learning and improving my
-        skills. Developing intuitive and appealing user experiences is what I'm
-        all about.
+        Freelance engineer building for web and native mobile, your products and
+        my own. React Native, Expo, Supabase, Shopify. Whatever ships the thing
+        right. Currently working on Dial, a brew repository for the specialty
+        coffee world. Pure math background, started a PhD, decided to build
+        things instead.
       </p>
-      <p>
-        Check out the projects tab for examples of my work and feel free to
-        contact me if you're interested in working together. I'm always excited
-        to take on new challenges.
-      </p>
-      <p>{'\u2013'} Cole</p>
+      <p>Say hi if you want to work together!</p>
+      <p>{"\u2013"} Cole</p>
     </>
   );
 }
